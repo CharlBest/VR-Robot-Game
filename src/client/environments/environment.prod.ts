@@ -1,13 +1,13 @@
 export const environment = {
   production: true,
-  webSocketUrlEndpoint: 'wss://nean.io/',
-  apiUrlEndpoint: 'https://nean.io',
+  webSocketUrlEndpoint: 'wss://vr-robot-game.herokuapp.com/',
+  apiUrlEndpoint: 'https://vr-robot-game.herokuapp.com',
   googleAnalytics: {
     web: 'UA-107304143-2',
     ios: 'UA-102909242-3',
     chromeExtension: 'UA-102909242-2'
   },
-  hostUrlForSharingToWeb: 'https://nean.io',
+  hostUrlForSharingToWeb: 'https://vr-robot-game.herokuapp.com',
   firebase: {
     apiKey: 'AIzaSyBhSz6yBTaiBngSdW1uC8ZkpBgmiPHMAAM',
     authDomain: 'nean-181415.firebaseapp.com',
