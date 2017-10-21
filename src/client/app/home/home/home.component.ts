@@ -13,30 +13,15 @@ import * as marked from 'marked';
 })
 export class HomeComponent implements OnInit {
 
-  isProcessing = true;
-  readmeText: string;
+  isProcessing = false;
   tutorialTypeEnum = TutorialType;
 
   constructor() { }
 
   ngOnInit() {
-    if (environment.production) {
-      this.getRepoReadme();
-    } else {
-      this.isProcessing = false;
-      this.readmeText = 'IN DEVELOPMENT MODE';
-    }
   }
 
-  getRepoReadme() {
-    const oReq = new XMLHttpRequest();
-    oReq.addEventListener('load', (event) => {
-      const content = (<XMLHttpRequest>event.target).responseText;
-      this.readmeText = marked(content);
-      this.isProcessing = false;
-    });
-
-    oReq.open('GET', 'https://raw.githubusercontent.com/CharlBest/nean-stack-starter/master/README.md');
-    oReq.send();
+  goToVr() {
+    window.location.href = `${window.location.origin}/vr.html`;
   }
 }

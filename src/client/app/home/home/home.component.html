@@ -1,5 +1,15 @@
 <mat-card *ngIf="!isProcessing">
-    <mat-card-content [innerHTML]="readmeText" class="github-readme-container"></mat-card-content>
+    <mat-card-title>
+        Robot battle
+    </mat-card-title>
+    <mat-card-content>
+        Just a small demo and work in progress
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button
+            color="primary"
+            (click)="goToVr()">Go to VR world</button>
+    </mat-card-actions>
 </mat-card>
 
 <mat-card *ngIf="isProcessing">
